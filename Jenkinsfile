@@ -3,12 +3,11 @@ echo "Branch name: ${env.BRANCH_NAME}"
 BUILD = env.BRANCH_NAME == 'master' ? 'latest' : env.BRANCH_NAME
 echo "Build: ${BUILD}"
 **/
+def buildNumber = env.BUILD_NUMBER
+echo ${buildNumber}
 
 node ('docker1') {
     checkout scm
-    echo "Branch name: ${env.BRANCH_NAME}"
-    BUILD = env.BRANCH_NAME == 'master' ? 'latest' : env.BRANCH_NAME
-    echo "Build: ${BUILD}"
     echo "Build: ${BUILD}"
     stage ('Build Building container') {
         echo "Build: ${BUILD}"
