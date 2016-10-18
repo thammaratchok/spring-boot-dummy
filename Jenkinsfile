@@ -1,4 +1,4 @@
-def BRANCH = env.BRANCH_NAME
+def BRANCH = env.BUILD_NUMBER
 
 echo "Branch name: ${BRANCH}"
 BUILD = ${BRANCH} == 'master' ? 'latest' : ${BRANCH}
