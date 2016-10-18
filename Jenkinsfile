@@ -1,5 +1,5 @@
 echo "Branch name: ${env.BRANCH_NAME}"
-BUILD = BRANCH_NAME == 'master' ? 'latest' : BRANCH_NAME
+BUILD = BRANCH_NAME == 'master' ? 'latest' : env.BRANCH_NAME
 echo "Build: ${BUILD}"
 
 
